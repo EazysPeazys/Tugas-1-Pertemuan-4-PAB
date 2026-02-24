@@ -18,10 +18,18 @@ class _ProductListPageState extends State<ProductListPage> {
   String searchQuery = "";
   String selectedCategory = "All";
 
+  final List<String> categories = [
+    "All",
+    "Car",
+    "Fashion",
+    "Jewelry",
+    "Electronics",
+  ];
+
   final List<Product> products = [
     Product(
       id: "1",
-      name: "Nike Air Jordan",
+      name: "Sepatu Nike Air Jordan",
       price: 2100000,
       category: "Fashion",
       image: "assets/Sepatu.jpg",
@@ -49,9 +57,9 @@ class _ProductListPageState extends State<ProductListPage> {
     ),
     Product(
       id: "5",
-      name: "Logam Mulia Antam 100 Gram",
-      price: 297000000,
-      category: "Gold",
+      name: "Logam Antam 100 Gram",
+      price: 150000000,
+      category: "Jewelry",
       image: "assets/Emas.jpg",
     ),
   ];
@@ -67,29 +75,79 @@ class _ProductListPageState extends State<ProductListPage> {
     }).toList();
 
     return Scaffold(
-      appBar: AppBar(title: const Text("Produk/Barang")),
       body: Column(
         children: [
+          const SizedBox(height: 10),
+
+          // 🔎 SEARCH
           Padding(
-            padding: const EdgeInsets.all(8),
+            padding: const EdgeInsets.symmetric(horizontal: 12),
             child: TextField(
               decoration: const InputDecoration(
                 hintText: "Cari produk...",
                 prefixIcon: Icon(Icons.search),
                 border: OutlineInputBorder(),
               ),
-              onChanged: (value) => setState(() => searchQuery = value),
+              onChanged: (value) {
+                setState(() {
+                  searchQuery = value;
+                });
+              },
             ),
           ),
+
+          const SizedBox(height: 10),
+
+          // 🏷 CATEGORY
+          SizedBox(
+            height: 45,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: categories.length,
+              itemBuilder: (context, index) {
+                final category = categories[index];
+                final isSelected = selectedCategory == category;
+
+                return GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      selectedCategory = category;
+                    });
+                  },
+                  child: Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 8),
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    decoration: BoxDecoration(
+                      color:
+                          isSelected ? Colors.deepPurple : Colors.grey[300],
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    alignment: Alignment.center,
+                    child: Text(
+                      category,
+                      style: TextStyle(
+                        color: isSelected ? Colors.white : Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
+
+          const SizedBox(height: 10),
+
+          // 🛍 PRODUCT GRID
           Expanded(
             child: GridView.builder(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(12),
               gridDelegate:
                   const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                childAspectRatio: 0.7,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10,
+                childAspectRatio: 0.68,
+                crossAxisSpacing: 12,
+                mainAxisSpacing: 12,
               ),
               itemCount: filtered.length,
               itemBuilder: (context, index) {
@@ -113,7 +171,8 @@ class _ProductListPageState extends State<ProductListPage> {
                       ),
                       const SizedBox(height: 8),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        padding:
+                            const EdgeInsets.symmetric(horizontal: 8),
                         child: Text(
                           product.name,
                           textAlign: TextAlign.center,
@@ -121,15 +180,25 @@ class _ProductListPageState extends State<ProductListPage> {
                               fontWeight: FontWeight.bold),
                         ),
                       ),
-                      Text(formatCurrency.format(product.price)),
+                      const SizedBox(height: 5),
+                      Text(
+                        formatCurrency.format(product.price),
+                        style: const TextStyle(
+                          color: Colors.deepPurple,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                       const Spacer(),
                       ElevatedButton(
                         onPressed: () {
-                          context.read<CartModel>().addToCart(product);
-                          ScaffoldMessenger.of(context).showSnackBar(
+                          context
+                              .read<CartModel>()
+                              .addToCart(product);
+                          ScaffoldMessenger.of(context)
+                              .showSnackBar(
                             SnackBar(
                               content: Text(
-                                  "${product.name} Masuk ke keranjang"),
+                                  "${product.name} masuk ke keranjang"),
                             ),
                           );
                         },

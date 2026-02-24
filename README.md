@@ -1,10 +1,11 @@
-# 🛒 Keranjang Belanja  
+# 🛒 Nabdaff Official Store
+
 ![Flutter](https://img.shields.io/badge/Flutter-3.x-blue?logo=flutter)
 ![Dart](https://img.shields.io/badge/Dart-3.x-blue?logo=dart)
 ![Provider](https://img.shields.io/badge/State%20Management-Provider-purple)
-![Academic Project](https://img.shields.io/badge/Project-Academic-green)
+![Academic Project](https://img.shields.io/badge/Project-Mobile%20App-green)
 
-Aplikasi keranjang belanja (*shopping cart*) berbasis mobile menggunakan **Flutter** dengan implementasi **Provider** sebagai state management.
+Aplikasi e-commerce sederhana berbasis **Flutter** yang mengimplementasikan sistem katalog produk dan keranjang belanja menggunakan **Provider** sebagai state management.
 
 ---
 
@@ -14,40 +15,45 @@ Aplikasi keranjang belanja (*shopping cart*) berbasis mobile menggunakan **Flutt
 **NIM:** 2409116090  
 **Kelas:** C 2024  
 **Mata Kuliah:** Pemrograman Aplikasi Bergerak  
-**Pertemuan:** 4  
 
 ---
 
-## 📖 Deskripsi
+## 📌 Deskripsi
 
-Keranjang Belanja merupakan aplikasi mobile sederhana yang dibuat untuk memahami konsep dasar pengembangan aplikasi menggunakan Flutter.  
-Aplikasi ini mengimplementasikan sistem belanja digital yang memungkinkan pengguna untuk melihat produk, melakukan pencarian, memfilter kategori, menambahkan produk ke keranjang, serta melakukan checkout.
+Nabdaff Official Store merupakan aplikasi simulasi toko online yang memungkinkan pengguna untuk:
 
-State management menggunakan **Provider** agar data keranjang dapat diperbarui secara real-time dan terstruktur dengan baik.
+- Melihat daftar produk
+- Melakukan pencarian produk
+- Memfilter berdasarkan kategori
+- Menambahkan produk ke keranjang
+- Mengatur jumlah item
+- Melihat total harga secara otomatis
+
+State management menggunakan **Provider** untuk memastikan data produk dan keranjang selalu sinkron secara real-time.
 
 ---
 
-## ✨ Fitur
+## ✨ Fitur Utama
 
 | Fitur | Keterangan |
 |-------|------------|
-| 📦 Daftar Produk | Menampilkan produk lengkap dengan gambar, nama, dan harga |
-| 🔍 Pencarian | Mencari produk berdasarkan nama secara real-time |
-| 🏷 Filter Kategori | Filter berdasarkan kategori seperti Elektronik, Gadget, Aksesoris |
-| 🛒 Keranjang | Tambah, kurangi, dan hapus produk dari keranjang |
-| 💰 Total Harga | Perhitungan otomatis berdasarkan jumlah item |
-| 🧾 Checkout | Ringkasan pesanan dan form input data pengguna |
-| ✅ Validasi | Validasi form sebelum konfirmasi pesanan |
+| 🏪 Landing Page | Halaman pembuka aplikasi |
+| 🔍 Pencarian Produk | Mencari produk berdasarkan nama |
+| 🏷 Filter Kategori | Menyaring produk berdasarkan kategori |
+| 🛍 Daftar Produk | Tampilan produk dalam bentuk card |
+| 🛒 Keranjang | Tambah & kurangi quantity |
+| 💰 Total Harga | Perhitungan otomatis |
+| 🔔 Badge Keranjang | Indikator jumlah item |
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Teknologi yang Digunakan
 
 - Flutter
 - Dart
 - Provider (State Management)
-- Google Fonts
 - Material Design
+- Google Fonts
 
 ---
 
@@ -60,32 +66,30 @@ lib/
 ├── providers/
 │   └── cart_provider.dart
 ├── screens/
+│   ├── landing_screen.dart
 │   ├── home_screen.dart
-│   ├── cart_screen.dart
-│   └── checkout_screen.dart
+│   └── cart_screen.dart
 ├── widgets/
 │   └── product_card.dart
 └── main.dart
 ```
 
-Struktur folder dibuat terpisah untuk mempermudah pengelolaan kode dan meningkatkan keterbacaan project.
+Struktur folder dipisahkan berdasarkan tanggung jawab untuk meningkatkan keterbacaan dan maintainability kode.
 
 ---
-
-## 🚀 Cara Menjalankan
 
 ## 🚀 Cara Menjalankan
 
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/username/nama-repository.git
+git clone https://github.com/username/nabdaff-official-store.git
 ```
 
 ### 2️⃣ Masuk ke Folder Project
 
 ```bash
-cd nama-folder-project
+cd nabdaff-official-store
 ```
 
 ### 3️⃣ Install Dependency
@@ -104,21 +108,110 @@ Pastikan emulator atau perangkat fisik sudah terhubung.
 
 ---
 
-## 📸 Tampilan Aplikasi
+# 📱 Dokumentasi Tampilan Aplikasi
 
-Tambahkan screenshot aplikasi di sini jika diperlukan.
+---
+
+## 🏪 1. Landing Page
+
+<p align="center">
+  <img src="assets/images/landing.png" width="300"/>
+</p>
+
+### Deskripsi
+
+Landing page berfungsi sebagai halaman pembuka aplikasi yang menampilkan identitas store serta tombol navigasi untuk memulai belanja.
+
+---
+
+## 🛍 2. Halaman Produk
+
+<p align="center">
+  <img src="assets/images/home.png" width="300"/>
+</p>
+
+### Deskripsi
+
+Halaman ini menampilkan daftar produk dalam bentuk card.  
+Tersedia fitur pencarian dan filter kategori untuk memudahkan pengguna menemukan produk.
+
+---
+
+## 🛒 3. Halaman Keranjang
+
+<p align="center">
+  <img src="assets/images/cart.png" width="300"/>
+</p>
+
+### Deskripsi
+
+Menampilkan daftar produk yang telah dipilih pengguna.  
+Pengguna dapat menambah atau mengurangi jumlah item serta melihat total harga secara otomatis.
+
+---
+
+## 🏷 4. Filter Kategori
+
+<p align="center">
+  <img src="assets/images/filter.png" width="300"/>
+</p>
+
+### Deskripsi
+
+Fitur filter digunakan untuk menyaring produk berdasarkan kategori seperti Car, Fashion, Jewelry, dan Electronics.
+
+---
+
+## 💳 5. Halaman Konfirmasi Pembayaran
+
+<p align="center">
+  <img src="assets/images/payment_confirmation.png" width="300"/>
+</p>
+
+### Deskripsi
+
+Halaman ini menampilkan ringkasan pesanan sebelum transaksi diproses.  
+Pengguna dapat meninjau kembali produk yang dibeli, jumlah item, serta total pembayaran.
+
+### Fitur:
+- Ringkasan daftar produk
+- Informasi total harga
+- Tombol konfirmasi pembayaran
+- Validasi sebelum melanjutkan transaksi
+
+Halaman ini berfungsi sebagai tahap verifikasi akhir sebelum pembayaran dinyatakan berhasil.
+
+---
+
+## ✅ 6. Halaman Transaksi Sukses
+
+<p align="center">
+  <img src="assets/images/success.png" width="300"/>
+</p>
+
+### Deskripsi
+
+Halaman ini ditampilkan setelah proses pembayaran berhasil dilakukan.  
+Menampilkan notifikasi bahwa transaksi telah sukses.
+
+### Informasi yang Ditampilkan:
+- Pesan konfirmasi keberhasilan
+- Ringkasan singkat transaksi
+- Tombol kembali ke halaman utama
+
+Halaman ini memberikan feedback visual kepada pengguna bahwa proses pembelian telah selesai.
 
 ---
 
 ## 📌 Tujuan Pembelajaran
 
-- Memahami struktur project Flutter  
-- Mengimplementasikan state management menggunakan Provider  
-- Mengelola data produk dan keranjang  
-- Membuat UI interaktif berbasis Material Design  
+- Memahami struktur project Flutter
+- Mengimplementasikan state management menggunakan Provider
+- Mengelola data dan navigasi antar halaman
+- Membangun UI responsif berbasis Material Design
 
 ---
 
 ## 🏷 Status
 
-Project ini dibuat untuk keperluan tugas mata kuliah dan bersifat akademik.
+Project ini dibuat untuk keperluan akademik dan pembelajaran.

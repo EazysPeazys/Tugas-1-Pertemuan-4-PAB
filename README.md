@@ -52,19 +52,21 @@ State management menggunakan **Provider** agar data keranjang dapat diperbarui s
 ---
 
 ## 📂 Struktur Project
-lib/
-┣ models/
-┃ ┗ product_model.dart
-┣ providers/
-┃ ┗ cart_provider.dart
-┣ screens/
-┃ ┣ home_screen.dart
-┃ ┣ cart_screen.dart
-┃ ┗ checkout_screen.dart
-┣ widgets/
-┃ ┗ product_card.dart
-┗ main.dart
 
+```
+lib/
+├── models/
+│   └── product_model.dart
+├── providers/
+│   └── cart_provider.dart
+├── screens/
+│   ├── home_screen.dart
+│   ├── cart_screen.dart
+│   └── checkout_screen.dart
+├── widgets/
+│   └── product_card.dart
+└── main.dart
+```
 
 Struktur folder dibuat terpisah untuk mempermudah pengelolaan kode dan meningkatkan keterbacaan project.
 
@@ -72,25 +74,31 @@ Struktur folder dibuat terpisah untuk mempermudah pengelolaan kode dan meningkat
 
 ## 🚀 Cara Menjalankan
 
+## 🚀 Cara Menjalankan
+
 ### 1️⃣ Clone Repository
 
-git clone <url-repository>
-
+```bash
+git clone https://github.com/username/nama-repository.git
+```
 
 ### 2️⃣ Masuk ke Folder Project
 
+```bash
 cd nama-folder-project
-
+```
 
 ### 3️⃣ Install Dependency
 
+```bash
 flutter pub get
-
+```
 
 ### 4️⃣ Jalankan Aplikasi
 
+```bash
 flutter run
-
+```
 
 Pastikan emulator atau perangkat fisik sudah terhubung.
 

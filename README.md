@@ -115,7 +115,7 @@ Pastikan emulator atau perangkat fisik sudah terhubung.
 ## 🏪 1. Landing Page
 
 <p align="center">
-  <img src="assets/images/landing.png" width="300"/>
+  <img width="693" height="1015" alt="Screenshot 2026-02-24 231017" src="https://github.com/user-attachments/assets/6e3e5d22-fc67-4cce-9add-5960d0258140" />
 </p>
 
 ### Deskripsi

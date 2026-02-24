@@ -127,7 +127,7 @@ Landing page berfungsi sebagai halaman pembuka aplikasi yang menampilkan identit
 ## 🛍 2. Halaman Produk
 
 <p align="center">
-  <img src="assets/images/home.png" width="300"/>
+  <img width="686" height="1016" alt="Screenshot 2026-02-24 223451" src="https://github.com/user-attachments/assets/593e7790-2c70-4aca-a01f-30a5463621b5" />
 </p>
 
 ### Deskripsi
@@ -140,7 +140,7 @@ Tersedia fitur pencarian dan filter kategori untuk memudahkan pengguna menemukan
 ## 🛒 3. Halaman Keranjang
 
 <p align="center">
-  <img src="assets/images/cart.png" width="300"/>
+  <img width="688" height="1013" alt="Screenshot 2026-02-24 224041" src="https://github.com/user-attachments/assets/90aab97d-b967-4e0a-b78d-271f31bb92b4" />
 </p>
 
 ### Deskripsi
@@ -153,7 +153,7 @@ Pengguna dapat menambah atau mengurangi jumlah item serta melihat total harga se
 ## 🏷 4. Filter Kategori
 
 <p align="center">
-  <img src="assets/images/filter.png" width="300"/>
+  <img width="691" height="1017" alt="Screenshot 2026-02-24 223512" src="https://github.com/user-attachments/assets/181ad926-2367-4b98-a15e-166a5a02f291" />
 </p>
 
 ### Deskripsi
@@ -165,7 +165,7 @@ Fitur filter digunakan untuk menyaring produk berdasarkan kategori seperti Car, 
 ## 💳 5. Halaman Konfirmasi Pembayaran
 
 <p align="center">
-  <img src="assets/images/payment_confirmation.png" width="300"/>
+  <img width="686" height="1018" alt="Screenshot 2026-02-24 224510" src="https://github.com/user-attachments/assets/148f3ff8-b090-41bc-bf65-2b47642939c5" />
 </p>
 
 ### Deskripsi
@@ -186,7 +186,7 @@ Halaman ini berfungsi sebagai tahap verifikasi akhir sebelum pembayaran dinyatak
 ## ✅ 6. Halaman Transaksi Sukses
 
 <p align="center">
-  <img src="assets/images/success.png" width="300"/>
+  <img width="688" height="1021" alt="Screenshot 2026-02-24 224520" src="https://github.com/user-attachments/assets/e6d4b0c0-b4d9-46fb-9b0c-b0d1022f9f1d" />
 </p>
 
 ### Deskripsi
